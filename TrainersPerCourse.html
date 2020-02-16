@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="/Projects_Html/AFDEM/validation.js"></script>
+
+    <title>PrivateSchool Managment</title>
+</head>
+<body>
+    <div id="main-menu">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a href="" class="navbar-brand">PrivateSchool</a>
+            <button class="navbar-toggler" data-target="#navbarMenu"> </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="Students.html" class="nav-link">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Courses.html" class="nav-link">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Trainers.html" class="nav-link">Trainers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Assignment.html" class="nav-link">Assignments</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pers
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="TrainersPerCourse.html">Trainer Per Course</a>
+                                <a class="dropdown-item" href="StudentsPerCourse.html">Students Per Course</a>
+                                <a class="dropdown-item" href="AssignmentsPerCourse.html">Assignments Per Course</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+      
+    <div class="forms-container">
+        <form name="studentForm" class="main-form needs-validation">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname" id="firstname" class="form-control" placeholder="eg. Karol" required>
+                <small class="form-text text-muted">
+                  This should be studnet's first name.
+                </small>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="eg. Koniewicz" required>
+                <small class="form-text text-muted">
+                  This should be studnet's last name.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+                <label for="gender">Course id</label>
+                <select name="gender" id="gender" class="form-control">
+                 <option value="Fundamental">Fundamental</option>
+                  <option value="OOP">OOP</option>
+                  <option value="Back end">Back end</option>
+                  <option value="Front end">Front end</option>
+                  <option value="Database">Database</option>
+                </select>
+            </div>
+          <button type="submit" class="btns">Submit</button>
+        </form>
+      </div>
+</body>
+</html>
