@@ -13,42 +13,10 @@
     <title>PrivateSchool Managment</title>
 </head>
 <body>
-    <div id="main-menu">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a href="" class="navbar-brand">PrivateSchool</a>
-            <button class="navbar-toggler" data-target="#navbarMenu"> </button>
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="Students.html" class="nav-link">Students</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Courses.html" class="nav-link">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Trainers.html" class="nav-link">Trainers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Assignment.html" class="nav-link">Assignments</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pers
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="TrainersPerCourse.html">Trainer Per Course</a>
-                                <a class="dropdown-item" href="StudentsPerCourse.html">Students Per Course</a>
-                                <a class="dropdown-item" href="AssignmentsPerCourse.html">Assignments Per Course</a>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-    </div>
+  <div id ="nav"></div>
+  <script>
+    jQuery("#nav").load("./menu.html");
+  </script>
       
     <div class="forms-container">
         <form name="studentForm" class="main-form needs-validation">
