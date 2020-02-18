@@ -21,16 +21,16 @@
   <script>
     jQuery("#nav").load("./menu.html");
   </script>
-  <script src="student.js"></script>
+
+  <script src="./student.js"></script>
 
   <div class="forms-container">
-    <form name="studentForm" class="main-form needs-validation" id="studentForm"
-      onsubmit="event.preventDefault();onFormSubmit();">
+    <form name="studentForm" class="main-form needs-validation" id="studentForm" onsubmit="event.preventDefault();onFormSubmit();">
       <div class="row">
         <div class="col">
           <div class="form-group">
             <label for="firstname">Firstname</label>
-            <input type="text" name="firstname" id="firstname" class="form-control" placeholder="eg. Karol" required>
+            <input type="text" name="firstname" id="firstname" class="form-control" maxlength="10" placeholder="eg. Karol"  required>
             <small class="form-text text-muted">
               This should be student's first name.
             </small>
@@ -39,7 +39,7 @@
         <div class="col">
           <div class="form-group">
             <label for="lastname">Lastname</label>
-            <input type="text" name="lastname" id="lastname" class="form-control" placeholder="eg. Koniewicz" required>
+            <input type="text" name="lastname" id="lastname" class="form-control" maxlength="10" placeholder="eg. Koniewicz"   required>
             <small class="form-text text-muted">
               This should be student's last name.
             </small>
@@ -56,7 +56,7 @@
       </div>
       <div class="form-group">
         <label for="fees">Tuition Fees</label>
-        <input type="number" name="fees" id="fees" class="form-control" pattern="[0-9]{7}" required>
+        <input type="number" name="fees" id="fees" class="form-control" maxlength="4" required>
         <small class="form-text text-muted">
           This should be student's Tuition fees. eg: 1000$
         </small>
@@ -68,8 +68,8 @@
           <option value="female">Female</option>
         </select>
       </div>
+      <button type="submit" class="btn btn-primary" id="sum">Submit</button>
     </form>
-    <button type="submit" class="btn btn-primary" id="sum">Submit</button>
 
     <div class="container" id="tablecon">
       <div class="col">
@@ -86,6 +86,7 @@
               </tr>
             </thead>
             <tbody>
+
             </tbody>
           </table>
         </td>
@@ -94,7 +95,6 @@
       </div>
     </div>
   </div>
-  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>

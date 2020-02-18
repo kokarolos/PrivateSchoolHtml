@@ -22,7 +22,7 @@ function readFormData() {
 
 //inserting data to table 
 function insertNewRecord(data) {
-    var table = document.getElementById("studentList").getElementsByTagName('tbody')[0];
+    var table = document.getElementById("List").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
     cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.title;

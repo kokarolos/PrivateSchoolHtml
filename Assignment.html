@@ -27,7 +27,7 @@
           <div class="col">
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" name="title" id="title" class="form-control" placeholder="eg. Private School Project" required>
+              <input type="text" name="title" id="title" class="form-control" placeholder="eg. Private School Project" maxlength="10" required>
               <small class="form-text text-muted">
                 This should be Assignment's Title.
               </small>
@@ -36,7 +36,7 @@
           <div class="col">
             <div class="form-group">
               <label for="description">Description</label>
-              <input type="text" name="description" id="description" class="form-control" placeholder="eg. In this project you should etc.">
+              <input type="text" name="description" id="description" class="form-control" maxlength="10" placeholder="eg. In this project you should etc.">
               <small class="form-text text-muted">
                 This should be Assignment's description
               </small>
@@ -44,15 +44,15 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="subDateTime">Submbit Date</label>
-          <input type="date" name="subDateTime" id="subDateTime" class="form-control" required>
+          <label for="subDateTime">Submit Date</label>
+          <input type="date" name="subDateTime" id="subDateTime" class="form-control" min="2020-01-01" max="2022-01-01" required>
           <small class="form-text text-muted">
             This should be Assignment's submit Date
           </small>
         </div>
         <div class="form-group">
           <label for="totalmark">Total Mark</label>
-          <input type="number" name="totalmark" id="totalmark" class="form-control" required>
+          <input type="number" name="totalmark" id="totalmark" class="form-control" max="100" required>
           <small class="form-text text-muted">
             This should be Assignment's Total Mark eg. 100
           </small>
