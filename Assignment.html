@@ -19,9 +19,10 @@
   <script>
     jQuery("#nav").load("./menu.html");
   </script>
-  
+  <script src="./assignment.js"></script>
     <div class="forms-container">
-      <form name="assignment-Form" class="main-form needs-validation" id="studentForm">
+      <form name="assignment-Form" class="main-form needs-validation" id="studentForm"
+      onsubmit="event.preventDefault();onFormSubmit();">
         <div class="row">
           <div class="col">
             <div class="form-group">
@@ -56,8 +57,29 @@
             This should be Assignment's Total Mark eg. 100
           </small>
         </div>
-        <button type="submit" class="btns" id ="sum">Submit</button>
-        
+       <button type="submit" class="btn btn-primary" id="sum">Submit</button>
+
+       <div class="container" id="tablecon">
+        <div class="col">
+          <td>
+            <table class="table table-bordered" class="list" id="List">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th style="font-size: small;">Submit Date</th>
+                  <th>Total Mark</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </td>
+          </tr>
+          </table>
+        </div>
+      </div>
       
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"

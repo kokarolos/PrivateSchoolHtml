@@ -1,5 +1,8 @@
 body{
-    background-color: rgb(215, 228, 225);
+    background-color: #3d5a6e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: lightgray;
 }
 .forms-container
 {
@@ -9,10 +12,23 @@ body{
     margin-left: auto;
     padding-top: 5%;
 }
-.btns{
-    color:White;
-    border:solid 1px black;
-    background-color: #3333ff;
-    border-radius: 12%;
+#sum{
+    border-radius: 5%;
     margin-left: 40%;
+}
+#sum:hover{
+    color:black;
+    background-color: white;
+}
+.wrapper{
+    margin-top: 10%;
+}
+#tablecon{
+    padding-top: 5%;
+}
+#studentForm{
+    padding-top: 5%;
+}
+#List{
+    color: lightgray;
 }

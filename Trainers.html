@@ -17,9 +17,9 @@
   <script>
     jQuery("#nav").load("./menu.html");
   </script>
-      
+      <script src="./trainer.js"></script>
     <div class="forms-container">
-        <form name="studentForm" class="main-form needs-validation">
+        <form name="studentForm" class="main-form needs-validation" onsubmit="event.preventDefault();onFormSubmit();">
           <div class="row">
             <div class="col">
               <div class="form-group">
@@ -42,8 +42,8 @@
           </div>
           <div class="form-group">
             <div class="form-group">
-                <label for="gender">Subject</label>
-                <select name="gender" id="gender" class="form-control">
+                <label for="subject">Subject</label>
+                <select name="subject" id="subject" class="form-control">
                  <option value="Fundamental">Fundamental</option>
                   <option value="OOP">OOP</option>
                   <option value="Back end">Back end</option>
@@ -51,8 +51,29 @@
                   <option value="Database">Database</option>
                 </select>
             </div>
-          <button type="submit" class="btns">Submit</button>
+            <button type="submit" class="btn btn-primary" id="sum">Submit</button>
         </form>
+      </div>
+
+      <div class="container" id="tablecon">
+        <div class="col">
+          <td>
+            <table class="table table-bordered" class="list" id="List">
+              <thead>
+                <tr>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>Subject</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </td>
+          </tr>
+          </table>
+        </div>
       </div>
       
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"

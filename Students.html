@@ -5,33 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="/Projects_Html/AFDEM/validation.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="/Projects_Html/AFDEM/validation.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/Projects_Html/validattion.js"></script>
 
   <title>PrivateSchool Managment</title>
 </head>
 
 <body>
-  
-  <div id ="nav">
-
+  <div id="nav">
   </div>
   <script>
     jQuery("#nav").load("./menu.html");
   </script>
+  <script src="student.js"></script>
 
   <div class="forms-container">
-    <form name="studentForm" class="main-form needs-validation" id="studentForm">
+    <form name="studentForm" class="main-form needs-validation" id="studentForm"
+      onsubmit="event.preventDefault();onFormSubmit();">
       <div class="row">
         <div class="col">
           <div class="form-group">
             <label for="firstname">Firstname</label>
             <input type="text" name="firstname" id="firstname" class="form-control" placeholder="eg. Karol" required>
             <small class="form-text text-muted">
-              This should be studnet's first name.
+              This should be student's first name.
             </small>
           </div>
         </div>
@@ -40,21 +41,22 @@
             <label for="lastname">Lastname</label>
             <input type="text" name="lastname" id="lastname" class="form-control" placeholder="eg. Koniewicz" required>
             <small class="form-text text-muted">
-              This should be studnet's last name.
+              This should be student's last name.
             </small>
           </div>
         </div>
       </div>
       <div class="form-group">
         <label for="dateOfBirth">Date of Birth</label>
-        <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" required>
+        <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" min="1930-01-01" max="2018-01-01"
+          required>
         <small class="form-text text-muted">
           This should be student's day of birth. eg: 13/10/1994
         </small>
       </div>
       <div class="form-group">
         <label for="fees">Tuition Fees</label>
-        <input type="number" name="fees" id="fees" class="form-control" required>
+        <input type="number" name="fees" id="fees" class="form-control" pattern="[0-9]{7}" required>
         <small class="form-text text-muted">
           This should be student's Tuition fees. eg: 1000$
         </small>
@@ -66,26 +68,34 @@
           <option value="female">Female</option>
         </select>
       </div>
-      <button type="submit" class="btns" id ="sum">Submit</button>
-      
-      <div>
-        <tb>
-          <tr>
-            <td>
-              Firstname : <span id="firstname-out"> </span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              LastName : <span id="lastname-out"> </span>
-            </td>
-          </tr>
-              dateOfBirth : <span id="dateOfBirth-out"> </span>
-              TuitionFees : <span id="fees-out"></span>
-              Gender : <span id="gender-out"></span> 
-        </tb>
+    </form>
+    <button type="submit" class="btn btn-primary" id="sum">Submit</button>
+
+    <div class="container" id="tablecon">
+      <div class="col">
+        <td>
+          <table class="table table-bordered" class="list" id="List">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Fees</th>
+                <th>Gender</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </td>
+        </tr>
+        </table>
       </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    </div>
+  </div>
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 </body>
