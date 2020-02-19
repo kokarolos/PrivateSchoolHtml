@@ -21,9 +21,10 @@
   <script>
     jQuery("#nav").load("./menu.html");
   </script>
+  <script src="./TrainersCourse.js"></script>
   
   <div class="forms-container">
-    <form name="trainercourseform" class="main-form needs-validation">
+    <form name="trainercourseform" class="main-form needs-validation" onsubmit="event.preventDefault();onFormSubmit();">
       <div class="row-sm">
         <div class="col-sm">
           <div class="form-group">
@@ -44,6 +45,23 @@
           </div>
           <button type="submit" class="btn btn-primary" id="sum">Submit</button>
     </form>
+    <div class="container" id="tablecon">
+      <div class="col">
+        <td>
+          <table class="table table-bordered" class="list" id="List">
+            <thead>
+              <tr>
+                <th>Course's Title</th>
+                <th>Trainer's Name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </td>
+      </div>
+    </div>
   </div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
