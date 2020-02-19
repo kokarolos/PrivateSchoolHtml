@@ -16,15 +16,14 @@
 </head>
 
 <body>
-    <div id ="nav"></div>
+    <div id="nav"></div>
     <script>
-      jQuery("#nav").load("./menu.html");
+        jQuery("#nav").load("./menu.html");
     </script>
     <script src="./course.js"></script>
-    
+
     <div class="forms-container">
-        <form name="studentForm" class="main-form needs-validation"
-         onsubmit="event.preventDefault();onFormSubmit();">
+        <form name="studentForm" class="main-form needs-validation" onsubmit="event.preventDefault();onFormSubmit();">
             <div class="row">
                 <div class="col">
                     <div class="form-group">
@@ -65,8 +64,8 @@
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="startDate">Starting Date</label>
-                        <input type="date" name="startDate" id="startDate" class="form-control"min="2020-18-02"
-                        max="2021-12-30" required>
+                        <input type="date" name="startDate" id="startDate" class="form-control" min="2020-18-02"
+                            max="2021-12-30" required>
                         <small class="form-text text-muted">
                             This should be course's starting date eg 2/1/2025
                         </small>
@@ -76,8 +75,8 @@
                 <div class="form-group">
                     <div class="col-sm">
                         <label for="endDate">Ending Date</label>
-                        <input type="date" name="endDate" id="endDate" class="form-control"min="2021-01-02"
-                        max="2022-01-01" required>
+                        <input type="date" name="endDate" id="endDate" class="form-control" min="2021-01-02"
+                            max="2022-01-01" required>
                         <small class="form-text text-muted">
                             This should be course's ending date eg 25/2/2025
                         </small>
@@ -89,26 +88,24 @@
 
         <div class="container" id="tablecon">
             <div class="col">
-              <td>
-                <table class="table table-bordered" class="list" id="List">
-                  <thead>
-                    <tr>
-                      <th>Title</th>
-                      <th>Stream</th>
-                      <th>Type</th>
-                      <th style="font-size: small;">Starting Date</th>
-                      <th style="font-size: small;">Ending Date</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </table>
-              </td>
-              </tr>
-              </table>
+                <td>
+                    <table class="table table-bordered" id="List">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Stream</th>
+                                <th>Type</th>
+                                <th style="font-size: small;">Starting Date</th>
+                                <th style="font-size: small;">Ending Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </td>
             </div>
-          </div>
+        </div>
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"

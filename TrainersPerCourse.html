@@ -15,14 +15,13 @@
 </head>
 
 <body>
-  <div id ="nav">
-    
+  <div id="nav">
   </div>
   <script>
     jQuery("#nav").load("./menu.html");
   </script>
   <script src="./TrainersCourse.js"></script>
-  
+
   <div class="forms-container">
     <form name="trainercourseform" class="main-form needs-validation" onsubmit="event.preventDefault();onFormSubmit();">
       <div class="row-sm">
@@ -43,12 +42,14 @@
               <option value="Karolos Koniewicz">Karolos Koniewicz</option>
             </select>
           </div>
+        </div>
+      </div>
           <button type="submit" class="btn btn-primary" id="sum">Submit</button>
     </form>
     <div class="container" id="tablecon">
       <div class="col">
         <td>
-          <table class="table table-bordered" class="list" id="List">
+          <table class="table table-bordered" id="List">
             <thead>
               <tr>
                 <th>Course's Title</th>
