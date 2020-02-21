@@ -26,13 +26,14 @@
 
   <div class="forms-container">
     <form name="studentForm" class="main-form needs-validation" id="studentForm"
-      onsubmit="event.preventDefault();onFormSubmit();" action ="#">
+      onsubmit="event.preventDefault();onFormSubmit();">
       <div class="row">
         <div class="col">
           <div class="form-group">
             <label for="firstname">Firstname</label>
             <input type="text" name="firstname" id="firstname" class="form-control" maxlength="10"
-              placeholder="eg. Karol" required>
+              placeholder="eg. Karol" pattern="[a-zA-Z]+"
+              required>
             <small class="form-text text-muted">
               This should be student's first name.
             </small>
@@ -42,7 +43,7 @@
           <div class="form-group">
             <label for="lastname">Lastname</label>
             <input type="text" name="lastname" id="lastname" class="form-control" maxlength="10"
-              placeholder="eg. Koniewicz" required>
+              placeholder="eg. Koniewicz" pattern="[a-zA-Z]+" required>
             <small class="form-text text-muted">
               This should be student's last name.
             </small>
