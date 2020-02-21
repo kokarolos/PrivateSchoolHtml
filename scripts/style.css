@@ -32,3 +32,12 @@ body{
 #List{
     color: lightgray;
 }
+#weclcometext
+{
+    
+    font-size: large;
+    color: azure;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align: center;
+}
