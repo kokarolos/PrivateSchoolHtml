@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="/Projects_Html/AFDEM/validation.js"></script>
+    <link rel="stylesheet" type="text/css" href="/scripts/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>PrivateSchool Managment</title>
+</head>
+
+<body>
+    <div id="nav"></div>
+    <script>
+        jQuery("#nav").load("./menu.html");
+    </script>
+    <script src="/scripts/course.js"></script>
+
+    <div class="forms-container">
+        <form name="studentForm" class="main-form needs-validation" onsubmit="event.preventDefault();onFormSubmit();">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" class="form-control" placeholder="eg. CB" required>
+                        <small class="form-text text-muted">
+                            Course's title name. eg CB9
+                        </small>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="type">Stream</label>
+                        <select name="stream" id="stream" class="form-control">
+                            <option value="Java">Java</option>
+                            <option value="C#">C#</option>
+                        </select>
+                        <small class="form-text text-muted">
+                            Course's Stream eg. C#
+                        </small>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select name="type" id="type" class="form-control">
+                            <option value="Full-Time">Full-Time</option>
+                            <option value="Part-Time">Part-Time</option>
+                        </select>
+                        <small class="form-text text-muted">
+                            Course's Type eg.Full
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="startDate">Starting Date</label>
+                        <input type="date" name="startDate" id="startDate" class="form-control" min="2020-18-02"
+                            max="2021-12-30" required>
+                        <small class="form-text text-muted">
+                            This should be course's starting date eg 2/1/2025
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm">
+                        <label for="endDate">Ending Date</label>
+                        <input type="date" name="endDate" id="endDate" class="form-control" min="2021-01-02"
+                            max="2022-01-01" required>
+                        <small class="form-text text-muted">
+                            This should be course's ending date eg 25/2/2025
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="sum">Submit</button>
+        </form>
+
+        <div class="container" id="tablecon">
+            <div class="col">
+                <td>
+                    <table class="table table-bordered" id="List">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Stream</th>
+                                <th>Type</th>
+                                <th style="font-size: small;">Starting Date</th>
+                                <th style="font-size: small;">Ending Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </td>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

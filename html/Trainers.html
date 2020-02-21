@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="/Projects_Html/AFDEM/validation.js"></script>
+  <link rel="stylesheet" type="text/css" href="/scripts/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <title>PrivateSchool Managment</title>
+</head>
+
+<body>
+  <div id="nav"></div>
+  <script>
+    jQuery("#nav").load("./menu.html");
+  </script>
+
+  <script src="/scripts/trainer.js"></script>
+  <div class="forms-container">
+    <form name="studentForm" class="main-form needs-validation" onsubmit="event.preventDefault();onFormSubmit();">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="firstname">Firstname</label>
+            <input type="text" name="firstname" id="firstname" class="form-control" maxlength="10"
+              placeholder="eg. Karol" required>
+            <small class="form-text text-muted">
+              This should be studnet's first name.
+            </small>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" name="lastname" id="lastname" class="form-control" maxlength="10"
+              placeholder="eg. Koniewicz" required>
+            <small class="form-text text-muted">
+              This should be studnet's last name.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select name="subject" id="subject" class="form-control">
+            <option value="Fundamental">Fundamental</option>
+            <option value="OOP">OOP</option>
+            <option value="Back end">Back end</option>
+            <option value="Front end">Front end</option>
+            <option value="Database">Database</option>
+          </select>
+        </div>
+      </div>
+        <button type="submit" class="btn btn-primary" id="sum">Submit</button>
+    </form>
+
+  <div class="container" id="tablecon">
+    <div class="col">
+      <td>
+        <table class="table table-bordered" id="List">
+          <thead>
+            <tr>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Subject</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </td>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
